@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+
+# Demo files (NEVER commit real demos)
+*.dem
+dem_files/
+
+# Parsed outputs / artifacts
+outputs/
+*.parquet
+*.zip
+
+# Local helper / scratch files
+update_script.txt
+brink.bat
+
+# Environment / secrets
+.env
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# OS junk
+.DS_Store
+Thumbs.db
