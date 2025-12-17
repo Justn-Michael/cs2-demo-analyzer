@@ -2,7 +2,9 @@ import threading
 import tkinter as tk
 from tkinter import filedialog, ttk, messagebox
 
-from v1_pipeline import run_v1
+from pipeline.match_pipeline import run_match
+
+
 
 
 class App(tk.Tk):
@@ -61,7 +63,7 @@ class App(tk.Tk):
 
     def _run_pipeline_thread(self, demo_path: str):
         try:
-            result = run_v1(demo_path)
+            result = run_match(demo_path)
 
             rows = result["rows"]
             match_id = result["match_id"]
@@ -70,8 +72,11 @@ class App(tk.Tk):
 
             self.after(0, lambda: self.populate(rows, match_id, map_name, parsed_folder))
         except Exception as e:
+            msg = str(e)
             self.after(0, lambda: self.status_var.set("Failed."))
-            self.after(0, lambda: messagebox.showerror("Error", str(e)))
+            self.after(0, lambda m=msg: messagebox.showerror("Error", m))
+
+
 
     def clear_table(self):
         for item in self.tree.get_children():
