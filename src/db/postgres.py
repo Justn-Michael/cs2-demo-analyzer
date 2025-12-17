@@ -4,7 +4,6 @@ import pandas as pd
 
 from util.text import safe_text
 
-
 try:
     import psycopg2
 except Exception:
