@@ -38,7 +38,6 @@ kills.parquet
 | `ct_side`          | string | CT team name        |
 | `t_side`           | string | T team name         |
 
-## ☠️ kills.parquet
 **All kill events**
 
 ### Notes

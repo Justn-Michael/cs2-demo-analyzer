@@ -1,28 +1,64 @@
-# Python
+############################################
+# Python artifacts
+############################################
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.py.class
 
-# Demo files (NEVER commit real demos)
-*.dem
-dem_files/
+############################################
+# Virtual environments (if you add one later)
+############################################
+.venv/
+venv/
+env/
 
-# Parsed outputs / artifacts
-outputs/
-*.parquet
-*.zip
-
-# Local helper / scratch files
-update_script.txt
-brink.bat
-
-# Environment / secrets
-.env
-
-# PyInstaller
+############################################
+# Build / distribution artifacts (PyInstaller)
+############################################
 build/
 dist/
 *.spec
 
-# OS junk
+############################################
+# Executables
+############################################
+*.exe
+
+############################################
+# Demo files (raw match data)
+############################################
+dem_files/
+*.dem
+
+############################################
+# Generated outputs (AWPy + parsed data)
+############################################
+outputs/
+*.parquet
+*.zip
+header.json
+
+############################################
+# Local databases / credentials
+############################################
+*.db
+*.sqlite
+.env
+.env.*
+
+############################################
+# OS / editor noise
+############################################
 .DS_Store
 Thumbs.db
+*.log
+
+############################################
+# Temporary / scratch files
+############################################
+*.tmp
+*.bak
+*.swp
+*.old
